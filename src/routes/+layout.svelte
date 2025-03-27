@@ -11,7 +11,7 @@
 
 </script>
 
-<header class="sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 backdrop-blur w-full h-[70px] lg:flex items-center lg:px-20 hidden">
+<header class="absolute top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 backdrop-blur w-full h-[70px] lg:flex items-center lg:px-20 hidden">
 	<a href="/">
         <b class="font-bold poppins">Dean</b> Blickenstaff
     </a>
@@ -35,7 +35,15 @@
 	{@render children()}
 </main>
 <footer class="border-t-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 p-4 flex items-center">
-	<div class="container mx-auto flex flex-col xl:flex-row justify-between items-center gap-4">
-
+	<div class="container mx-auto flex flex-col flex-row justify-center items-center gap-4">
+        <a href="/" aria-label="link" class="badge-icon">
+            <img alt="GitHub" src="/mdi--github.png" class=""/>
+        </a>
+        <a href="/" aria-label="link" class="badge-icon preset-filled">
+            
+        </a>
+        <a href="/" aria-label="link" class="badge-icon preset-filled">
+            
+        </a>
 	</div>
 </footer>
