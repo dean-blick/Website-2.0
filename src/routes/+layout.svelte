@@ -4,14 +4,14 @@
 
 	let tabs = [
         { name: 'Projects', link: 'projects'},
-        { name: 'Web-Projects', link: 'webProjects'},
-        //{ name: 'Transcript', link: 'transcript'} //todo
+        { name: 'Transcript', link: 'transcript'},
+        { name: 'Resume', link: 'resume'}
     ];
 
 
 </script>
 
-<header class="sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 backdrop-blur w-full h-[70px] flex items-center lg:px-20">
+<header class="sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 backdrop-blur w-full h-[70px] lg:flex items-center lg:px-20 hidden">
 	<a href="/">
         <b class="font-bold poppins">Dean</b> Blickenstaff
     </a>
