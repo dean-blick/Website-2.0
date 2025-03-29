@@ -1,18 +1,24 @@
-interface ProjectInfo {
+interface TranscriptInfo {
     Title: string,
     Description: string,
-    Badges: Array<string>,
-    Link: string,
-    GitHub: string
+    Badges: Array<string>
 }
 
-export const projects: Array<ProjectInfo> = [
+export const transcript: Array<TranscriptInfo> = [
     {
-        Title: 'ExampleTitle',
+        Title: 'Computer Science Courses',
+        Description: "",
+        Badges: []
+    },
+    {
+        Title: 'Example Class',
         Description: 'Example description, asdasdasdasdasdsasdaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa',
-        Badges: ['Example Tech 1', 'Example Tech 2'],
-        Link: 'exampleroute',
-        GitHub: 'GitHub.com'
+        Badges: ['Example Tech 1', 'Example Tech 2']
+    },
+    {
+        Title: 'General Education Courses',
+        Description: "",
+        Badges: []
     },
 ]
 

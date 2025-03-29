@@ -1,6 +1,6 @@
 <script lang="ts">
-    let {info} = $props<{info: ProjectItem}>()
-    interface ProjectItem {
+    let {info} = $props<{info: ProjectInfo}>()
+    interface ProjectInfo {
         Title: string,
         Description: string,
         Badges: Array<string>,

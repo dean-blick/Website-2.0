@@ -5,7 +5,7 @@
 
     let { data }: { data: PageData } = $props();
 
-    interface ProjectItem {
+    interface ProjectInfo {
         Title: string,
         Description: string,
         Badges: Array<string>,
@@ -15,7 +15,7 @@
 </script>
 
 
-<div class="flex flex-col min-h-screen w-full lg:w-screen items-center pt-[70px]">
+<div class="flex flex-col min-h-screen w-full lg:w-screen items-center pt-[78px]">
     {#each projects as project}
         <Project info={project}/>
     {/each}
