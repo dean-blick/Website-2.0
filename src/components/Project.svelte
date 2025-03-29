@@ -9,26 +9,32 @@
     }
 </script>
 
-<div class="flex flex-col flex-wrap  lg:items-center lg:justify-between lg:px-60 justify-center">
-    <div class="flex flex-row justify-start">
-        {info.Title}
+<div class="flex flex-row card preset-filled-surface-100-900 my-2 mx-5 p-3 lg:w-1/3">
+    <div class="flex flex-col flex-wrap lg:justify-between justify-center">
+        <h1 class="flex flex-row justify-start mb-2">
+            {info.Title}
+        </h1>
+        <div class="flex flex-row justify-start text-wrap">
+            {info.Description}
+        </div>
+        <div class="flex flex-row flex-wrap justify-start ">
+            {#each info.Badges as badge}
+                <div class="badge preset-filled-primary-100-900 mr-2 mt-2">
+                    {badge}
+                </div>
+            {/each}
+        </div>
     </div>
-    <div class="flex flex-row justify-start">
-        {info.Description}
-    </div>
-    <div class="flex flex-row justify-start">
-        {#each info.Badges as badge}
-            <div class="badge">
-                {badge}
-            </div>
-        {/each}
-    </div>
-</div>
-<div class="flex flex-col">
-    <div>
-        <!--Place in top right, github button-->
-    </div>
-    <div>
-        <!--Place in bottom right, go to live demo button-->
+    <div class="flex flex-col justify-between items-end">
+        <a href="/" aria-label="link" class="">
+            <img alt="GitHub" src="/mdi--github.png" class="badge-icon size-5"/>
+        </a>
+        {#if info.Link != ""}
+            <a href={info.Link} class="flex flex-row badge preset-outlined-primary-50-950 justify-center items-center text-center">
+                Go
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="#ffffff" d="M2 11V9h12l-4-4l1-2l7 7l-7 7l-1-2l4-4z"/></svg>
+            </a>
+        {/if}
+        
     </div>
 </div>

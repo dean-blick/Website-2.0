@@ -9,9 +9,9 @@ interface ProjectItem {
 export const projects: Array<ProjectItem> = [
     {
         Title: 'ExampleTitle',
-        Description: 'Example description, asdasdasdasdasdsasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+        Description: 'Example description, asdasdasdasdasdsasdaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa',
         Badges: ['Example Tech 1', 'Example Tech 2'],
-        Link: '/exampleroute',
+        Link: 'exampleroute',
         GitHub: 'GitHub.com'
     },
 ]
