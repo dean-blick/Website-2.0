@@ -15,7 +15,7 @@
 </script>
 
 
-<div class="flex flex-col min-h-screen w-full lg:w-screen items-center pt-[78px]">
+<div class="flex flex-col min-h-screen w-full lg:w-screen items-center pt-[78px] pb-2">
     {#each projects as project}
         <Project info={project}/>
     {/each}
