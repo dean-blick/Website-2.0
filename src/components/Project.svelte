@@ -11,10 +11,10 @@
 
 <div class="flex flex-row w-[calc(100%-40px)] card preset-filled-surface-100-900 my-2 p-3 lg:w-1/3">
     <div class="flex flex-col flex-wrap lg:justify-between justify-center">
-        <h1 class="flex flex-row justify-start mb-2 font-bold">
+        <h1 class={"flex flex-row justify-start  font-bold " + (info.Description != "" ? ("mb-2") : ("mb-0"))}>
             {info.Title}
         </h1>
-        <div class="flex flex-row w-full justify-start text-wrap text-sm">
+        <div class="flex flex-row w-full justify-start text-wrap text-sm opacity-75">
             {info.Description}
         </div>
         <div class="flex flex-row flex-wrap justify-start mt-1">
