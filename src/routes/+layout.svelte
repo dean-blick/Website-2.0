@@ -10,9 +10,9 @@
     }
 
 	let tabs = [
-        { name: 'Projects', link: 'projects'},
-        { name: 'Transcript', link: 'transcript'},
-        { name: 'Resume', link: 'resume'}
+        { name: 'Projects', link: '/projects'},
+        { name: 'Transcript', link: '/transcript'},
+        { name: 'Resume', link: '/resume'}
     ];
 
 

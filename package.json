@@ -30,6 +30,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@sveltejs/adapter-auto": "^5.0.0"
+		"@sveltejs/adapter-auto": "^5.0.0",
+		"mongodb": "^6.15.0"
 	}
 }
