@@ -18,7 +18,7 @@
 
 </script>
 
-<header class="absolute top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 backdrop-blur w-full h-[70px] flex justify-center items-center px-5 lg:px-20">
+<header class="absolute top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-950/90 backdrop-blur w-full h-[70px] flex justify-center items-center px-5 lg:px-20">
 	<a href="/" class="flex flex-row mr-4">
         <b class="font-bold poppins">Dean</b> <div class="hidden lg:block">&nbsp;Blickenstaff</div>
     </a>
@@ -38,7 +38,7 @@
 <main class="bg-surface-950/50">
 	{@render children()}
 </main>
-<footer class="border-t-[1px] border-surface-500/20 bg-surface-50/90 dark:bg-surface-950/90 p-4 flex items-center h-[70px]">
+<footer class="border-t-[1px] border-surface-500/20 bg-surface-950/90 p-4 flex items-center h-[70px]">
 	<div class="container mx-auto flex flex-row justify-center items-center gap-4">
         <a href="https://github.com/dean-blick" target="_blank" aria-label="GitHub" class="">
             <img alt="GitHub" src="/mdi--github.png" class="size-8"/>

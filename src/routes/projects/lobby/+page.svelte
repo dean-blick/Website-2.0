@@ -42,10 +42,10 @@
 
 
 <div class="flex flex-col w-full h-screen pt-[70px] items-center">
-    <div class="card p-3 m-2 w-[calc(100%-30px)] lg:w-1/3 bg-surface-100-900">
+    <div class="card p-3 m-2 w-[calc(100%-30px)] lg:w-1/3 bg-surface-900">
         <input class={"input " + (userName == "" ? ("border-[2px] border-error-500") : (""))} type="text" placeholder={"Username"} bind:value={userName}>
     </div>
-    <form class="flex flex-col w-[calc(100%-30px)] lg:w-1/3 items-center card bg-surface-100-900 p-3" method="POST" action="?/addLobbyDocument" use:enhance>
+    <form class="flex flex-col w-[calc(100%-30px)] lg:w-1/3 items-center card bg-surface-900 p-3" method="POST" action="?/addLobbyDocument" use:enhance>
         <div class="grid grid-cols-2 grid-rows-3 items-center gap-2">
             <div class="mr-1">Name of Lobby: </div>
             <input class="input mr-4" type="text" name = "lobbyName" placeholder={"lobbyName"} bind:value={createLobbyName}>
@@ -62,7 +62,7 @@
         </button>
     </form>
     {#each testData as d}
-        <div class="flex flex-row mt-2 w-[calc(100%-30px)] lg:w-1/3 card bg-surface-100-900 p-3 justify-between">
+        <div class="flex flex-row mt-2 w-[calc(100%-30px)] lg:w-1/3 card bg-surface-900 p-3 justify-between">
             <article>
                 <h2>{d.name}</h2>
                 <h3 class="pl-8">Players:

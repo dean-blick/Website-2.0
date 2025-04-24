@@ -93,7 +93,7 @@
 
 <div class="flex flex-row">
     <div class="flex lg:flex-col lg:w-1/10 lg:h-screen lg:ml-10 justify-center">
-        <div class="flex flex-col lg:h-1/2 card bg-surface-100-900 items-center">
+        <div class="flex flex-col lg:h-1/2 card bg-surface-900 items-center">
             <h class="mt-5">Players:</h>
             {#each activeLobbyState.players as player}
                 <div class="mt-2">
