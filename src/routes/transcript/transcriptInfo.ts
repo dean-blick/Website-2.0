@@ -50,6 +50,13 @@ export const transcript: Array<ProjectInfo> = [
         GitHub: ''
     },
     {
+        Title: 'MATH 510 - Discrete Mathematics ',
+        Description: "Combinatorics and graph theory. Topics selected from counting principles, permutations and combinations, the inclusion-exclusion principle, recurrence relations, trees, graph coloring, Eulerian and Hamiltonian circuits, block designs, and Ramsey Theory.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
         Title: 'CIS 501 - Software Architecture and Design ',
         Description: "Principles and patterns for design and structure of software, development of object-oriented models, examples of software architecture.",
         Badges: ['C#', 'UML', 'Windows Forms'],
@@ -115,21 +122,112 @@ export const transcript: Array<ProjectInfo> = [
     {
         Title: 'GEOL 200 - Earth Through Time ',
         Description: "Earth Through Time provides a comprehensive survey of Earth’s 4.5 billion year history. It explores the major events that have shaped the physical and biological development of Earth and how processes like plate tectonics and climate change interact with life, forming an integrated system.",
-        Badges: ['Badge 1', 'Badge 2'],
+        Badges: [],
         Link: '',
         GitHub: ''
     },
     {
-        Title: 'Example',
-        Description: "Description",
-        Badges: ['Badge 1', 'Badge 2'],
+        Title: 'MATH 551 - Applied Matrix Theory ',
+        Description: "Matrix algebra, solutions to systems of linear equations, determinants, vector spaces, linear transformations, eigenvalues, linear programming, approximation techniques.",
+        Badges: [],
         Link: '',
         GitHub: ''
     },
     {
-        Title: 'Example',
-        Description: "Description",
-        Badges: ['Badge 1', 'Badge 2'],
+        Title: 'AMETH 160 - Introduction to American Ethnic Studies',
+        Description: "This course introduces students to the major concepts related to ethnicity and to some of the major American ethnic groups.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'CHM 230 - Chemistry II',
+        Description: "Second course of a two-semester study of the principles of chemistry and the properties of the elements and their compounds.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'MANGT 220 - Principles of Management',
+        Description: "Provides an introduction to the four basic managerial functions of planning, organizing, leading and controlling and their application to today’s complex work environment. An emphasis is placed on the roles and responsibilities of managers that help them to successfully meet organizational objectives by effectively leading employees and optimizing processes.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'CHM 210 - Chemistry I',
+        Description: "First course of a two-semester study of the principles of chemistry and the properties of the elements and their compounds.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'MUSIC 170 - History of Rock and Roll',
+        Description: "A study of Rock and Roll from its origins through today, focusing on the development of rock styles from its roots in blues, folk, country, and pop.  Expansion of listening experience through study of song forms, musical instruments of rock, and the socio-political significance of song lyrics.  Examinations, research paper required.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'STAT 510 - Introductory Probability and Statistics I',
+        Description: "Descriptive statistics, probability concepts and laws, sample spaces; random variables; binomial, uniform, normal, and Poisson; two-dimensional variates; expected values; confidence intervals; binomial parameter, median, mean, and variance; testing simple hypotheses using CIs and X2; goodness of fit. Numerous applications.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'MATH 221 - Analytic Geometry and Calculus II',
+        Description: "Continuation of MATH 220 to include transcendental functions, techniques of integration, and infinite series.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'COMM 106 - Public Speaking I',
+        Description: "Principles and practice of message preparation, audience analysis, presentational skills, and speech criticism permitting greater practice in oral presentation.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'ECON 110 - Principles of Macroeconomics',
+        Description: "Basic facts, principles, and problems of economics; determination of the level of output, employment, and the price level; the monetary and banking system; problems and policies of economic instability, inflation, and growth; principles of economic development; other economics systems.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'ENGL 200 - Expository Writing II',
+        Description: "Introduction to writing persuasively. As with ENGL 100, uses discussion, workshops, and conferences, and emphasizes the writing process.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'ENGL 100 - Expository Writing I',
+        Description: "Introduction to expressive and informative writing. Frequent discussions, workshops, and conferences. Offers extensive practice in the process of writing: getting ideas, drafting, analyzing drafts, revising, and editing.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'GEOL 100 - Earth in Action',
+        Description: "The earth’s physical, structural, and dynamic features; the most common minerals and rocks; processes affecting the earth.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'MATH 220 - Analytic Geometry and Calculus I',
+        Description: "Analytic geometry, differential and integral calculus of algebraic and trigonometric functions.",
+        Badges: [],
+        Link: '',
+        GitHub: ''
+    },
+    {
+        Title: 'MATH 100 - College Algebra',
+        Description: "Fundamental concepts of algebra; algebraic equations and inequalities; functions and graphs; zeros of polynomial functions; exponential and logarithmic functions; systems of equations and inequalities.",
+        Badges: [],
         Link: '',
         GitHub: ''
     },
@@ -138,7 +236,7 @@ export const transcript: Array<ProjectInfo> = [
 // {
 //     Title: 'Example',
 //     Description: "Description",
-//     Badges: ['Badge 1', 'Badge 2'],
+//     Badges: [],
 //     Link: '',
 //     GitHub: ''
 // },
