@@ -15,7 +15,7 @@
 </script>
 
 
-<div class="flex flex-col min-h-screen w-full lg:w-screen items-center pt-[78px] pb-2">
+<div class="flex flex-col min-h-screen w-full lg:w-auto items-center pt-2 pb-2">
     {#each transcript as item}
         <Project info={item}/>
     {/each}

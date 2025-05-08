@@ -15,6 +15,20 @@ export const projects: Array<ProjectInfo> = [
         GitHub: ''
     },
     {
+        Title: 'Online Collaborative Art Board - Hack KU',
+        Description: '\"Hack Draw\" was an online collaborative art board made by me during the 36 hour hackathon \"Hack KU.\" You can see the Devpost submission here or click the go link to see a non-online demo: https://devpost.com/software/hack-draw',
+        Badges: ['Svelte/SvelteKit', 'MongoDB Atlas', 'TailwindCSS', 'SkeletonUI'],
+        Link: 'https://hack-draw.vercel.app',
+        GitHub: 'https://github.com/dean-blick/HackDraw'
+    },
+    {
+        Title: 'Online Game Lobby',
+        Description: 'The idea behind the online game lobby was to create a \"lobby\" system where you can play some simple games online with friends via a link and browse system. Tic Tac Toe is the only game implemented currently but the lobby system is functional.',
+        Badges: ['SvelteKit', 'MongoDB Atlas'],
+        Link: '/projects/lobby',
+        GitHub: ''
+    },
+    {
         Title: 'Scantron Program',
         Description: 'The new piece of software for the new Scantron machine I deleveloped while working for K-State IT.',
         Badges: ['C#', 'WPF'],

@@ -50,18 +50,18 @@
     
 </script>
 
-<div class="flex flex-col h-full items-center">
-    <div class="flex flex-col h-full w-[calc(var(--height))] items-center">
-        <div class="grid grid-rows-3 grid-cols-3 w-1/3 mt-10">
+<div class="flex flex-col h-full items-center justify-center">
+    <div class="flex flex-col w-[calc(var(--height))] items-center justify-center">
+        <div class="grid grid-rows-3 grid-cols-3 w-9/12 lg:w-1/3 mt-10">
             {#each Array.from({length: 9}) as _, i}
-            <TicTacToeButton value={board[i]} exportFunction={processInput} identifier={i} enabled={turn && !gameOver}/>
+            <TicTacToeButton value={board[i]} exportFunction={processInput} identifier={i} enabled={turn && !gameOver && board[i] == " "}/>
             {/each}
         </div>
         {#if turn && !gameOver}
-        <div class="text-3xl mt-4">It is your turn</div>
+            <div class="text-3xl mt-4 absolute top-[calc(100%-25vh)]">It is your turn</div>
         {/if}
         {#if gameOver}
-            <div class="text-3xl mt-4">{winner} wins!</div>
+            <div class="text-3xl mt-4 absolute top-[calc(100%-25vh)]">{winner} wins!</div>
         {/if}
         
     </div>

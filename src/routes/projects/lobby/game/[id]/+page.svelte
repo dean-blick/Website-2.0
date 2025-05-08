@@ -44,7 +44,7 @@
     }
 
     async function sendGameRequest(game: string) {
-        const response = await fetch(`../streamAPI/${location.href.split('/')[5]}`, {
+        const response = await fetch(`../streamAPI/${location.href.split('/')[6]}`, {
 			method: 'POST',
 			body: JSON.stringify({ isStartRequest: true, game: game, turnInfo: {} }),
 			headers: {
@@ -55,7 +55,7 @@
 
     async function sendGameTurn(game: string, turnInfo: Array<string>) {
         //console.log("game: " + game)
-        const response = await fetch(`../streamAPI/${location.href.split('/')[5]}`, {
+        const response = await fetch(`../streamAPI/${location.href.split('/')[6]}`, {
 			method: 'POST',
 			body: JSON.stringify({ isStartRequest: false, game: game, turnInfo: turnInfo }),
 			headers: {
@@ -65,7 +65,7 @@
     }
 
     async function getLobbyData() {
-        let response = await fetch(`../streamAPI/${location.href.split('/')[5]}`)
+        let response = await fetch(`../streamAPI/${location.href.split('/')[6]}`)
         activeLobbyState = await response.json()
         //console.log(activeLobbyState)
         setTimeout(getLobbyData, 1000)
@@ -84,6 +84,7 @@
         activeLobbyState.host = lobbyInfo.host;
         activeLobbyState.maxPlayers = lobbyInfo.maxPlayers;
         activeLobbyState.playerCount = lobbyInfo.playerCount;
+
         activeLobbyState.players = playersToPlayerNames(lobbyInfo.players);
 
         getLobbyData()
@@ -92,31 +93,31 @@
 </script>
 
 <div class="flex flex-row">
-    <div class="flex lg:flex-col lg:w-1/10 lg:h-screen lg:ml-10 justify-center">
+    <div class="flex lg:flex-col lg:w-1/10 lg:min-h-[calc(100vh-70px)] lg:ml-10 justify-center">
         <div class="flex flex-col lg:h-1/2 card bg-surface-900 items-center">
-            <h class="mt-5">Players:</h>
-            {#each activeLobbyState.players as player}
-                <div class="mt-2">
-                    {player}
-                </div>
-            {/each}
-            {#if activeLobbyState.gameState.game != "InLobby" && isHost == true}
-                <button aria-label="back to lobby button" class="" onclick={async (e) => {sendGameRequest("InLobby")}}>Back to lobby</button>
+            <h class="mt-5 card bg-surface-800 px-10 py-2">Players:</h>
+            <div class="flex flex-col">
+                {#each activeLobbyState.players as player}
+                    <div class="mt-2 text-wrap">
+                        {player}
+                    </div>
+                {/each}
+            </div>
+            
+            {#if activeLobbyState.gameState.game != "InLobby" && isHost}
+                <button aria-label="back to lobby button" class="btn preset-outlined-primary-500 mt-auto mb-5" onclick={async (e) => {sendGameRequest("InLobby")}}>Back to lobby</button>
+            {/if}
+            {#if activeLobbyState.gameState.game == "InLobby"&& isHost}
+                <button class="btn preset-outlined-primary-500 mt-auto mb-5" onclick={async (e) => {
+                    sendGameRequest("TicTacToe")
+                }}>Start Game</button>
             {/if}
         </div>
     </div>
-    <div class="flex flex-col h-screen justify-center items-center">
+    <div class="flex flex-col min-h-[calc(100vh-70px)] lg:w-[calc(100%-20rem)] justify-center items-center">
         {#if activeLobbyState.gameState.game == "InLobby" && !error}
             <div class="flex flex-row left-20">
-                {#if isHost}
-                <div class="flex flex-col">
-                    <button class="btn">Tic Tac Toe</button>
-                    <button onclick={async (e) => {
-                        sendGameRequest("TicTacToe")
-                    }}>Start Game</button>
-                </div>
                 
-                {/if}
             </div>
         {:else if !error}
         <div class="flex flex-col h-full">
