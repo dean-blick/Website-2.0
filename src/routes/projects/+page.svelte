@@ -1,17 +1,6 @@
 <script lang="ts">
-    import type { PageData } from './$types';
     import { projects } from './projectInfo';
     import Project from '../../components/Project.svelte';
-
-    let { data }: { data: PageData } = $props();
-
-    interface ProjectInfo {
-        Title: string,
-        Description: string,
-        Badges: Array<string>,
-        Link: string,
-        GitHub: string
-    }
 </script>
 
 

@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
-    import type {PageData} from "./$types";
-    import { enhance } from "$app/forms";
-    import type { ActionData } from "./$types";
+    import type {PageProps} from "./$types";
     import { isLoading } from "../../../stores/LoadingState.svelte";
 	import { onMount } from "svelte";
 
-    //This form object is like magical stuff that grabs the response from the post request.. very cool
-    let { data, form }: { data: PageData, form: ActionData } = $props();
+    let { data }: PageProps = $props();
 
     interface dataObject {
         players: Array<{playerName: string}>,
@@ -107,27 +104,34 @@
         Create Lobby
     </button>
     
-    {#each testData as d}
-        <div class="flex flex-row mt-2 w-[calc(100%-30px)] lg:w-1/3 card bg-surface-900 p-3 justify-between">
-            <article>
-                <h2>{d.name}</h2>
-                <h3 class="pl-8">Players:
-                    {#each d.players as player}
-                        <p class="pl-4">- {player.playerName}</p>
-                    {/each}
-                </h3>
-            </article>
-            <div class="flex">
-                <input type="hidden" name="lobbyId" value={d._id}/>
-                <input type="hidden" name="playerName" value={userName}/>
-                <input type="hidden" name="playerID" value={data.playerID}/>
-                <button disabled={!userName} class="btn preset-filled-primary-500 disabled:hover:opacity-70 self-center"
-                onclick={() => {JoinLobby(d._id)}}>
-                Join Lobby
-            </button>
-            </div>
-            
+
+    {#await data.testData}
+        <div>
+            Loading Lobbies...
         </div>
-    {/each}
+    {:then testData} 
+        {#each testData as d}
+            <div class="flex flex-row mt-2 w-[calc(100%-30px)] lg:w-1/3 card bg-surface-900 p-3 justify-between">
+                <article>
+                    <h2>{d.name}</h2>
+                    <h3 class="pl-8">Players:
+                        {#each d.players as player}
+                            <p class="pl-4">- {player.playerName}</p>
+                        {/each}
+                    </h3>
+                </article>
+                <div class="flex">
+                    <input type="hidden" name="lobbyId" value={d._id}/>
+                    <input type="hidden" name="playerName" value={userName}/>
+                    <input type="hidden" name="playerID" value={data.playerID}/>
+                    <button disabled={!userName} class="btn preset-filled-primary-500 disabled:hover:opacity-70 self-center"
+                    onclick={() => {JoinLobby(d._id)}}>
+                    Join Lobby
+                </button>
+                </div>
+            </div>
+        {/each}
+    {/await}
+    
     
 </div>
