@@ -19,7 +19,12 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" type="image/svg" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/svg" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 <header class="sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-950/90 backdrop-blur w-full h-[70px] flex justify-center items-center px-5 lg:px-20">
 	<a href="/" class="flex flex-row mr-4">
