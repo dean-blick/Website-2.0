@@ -18,6 +18,9 @@
 
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/svg" href="/favicon-96x96.png" />
+</svelte:head>
 <header class="sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-950/90 backdrop-blur w-full h-[70px] flex justify-center items-center px-5 lg:px-20">
 	<a href="/" class="flex flex-row mr-4">
         <b class="font-bold poppins">Dean</b> <div class="hidden lg:block">&nbsp;Blickenstaff</div>
