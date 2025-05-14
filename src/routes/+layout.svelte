@@ -25,7 +25,7 @@
 	<a href="/" class="flex flex-row mr-4">
         <b class="font-bold poppins">Dean</b> <div class="hidden lg:block">&nbsp;Blickenstaff</div>
     </a>
-	<div class="flex lg:ml-auto items-center justify-center gap-4">
+	<div class="flex lg:ml-auto items-center justify-center gap-2 lg:gap-4">
         {#each tabs as tab, index}
             <a href={tab.link} class="translate-y-[1px] btn preset-outlined-primary-100-900">
                 <p>{tab.name}</p>
