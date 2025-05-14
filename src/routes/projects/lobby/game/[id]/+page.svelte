@@ -93,7 +93,7 @@
 </script>
 
 <div class="flex flex-row">
-    <div class="flex lg:flex-col lg:w-1/10 lg:min-h-[calc(100vh-70px)] lg:ml-10 justify-center">
+    <div class="flex lg:flex-col lg:w-1/10 lg:min-h-[calc(100dvh-70px)] lg:ml-10 justify-center">
         <div class="flex flex-col lg:h-1/2 card bg-surface-900 items-center">
             <h class="mt-5 card bg-surface-800 px-10 py-2">Players:</h>
             <div class="flex flex-col">
@@ -114,7 +114,7 @@
             {/if}
         </div>
     </div>
-    <div class="flex flex-col min-h-[calc(100vh-70px)] lg:w-[calc(100%-20rem)] justify-center items-center">
+    <div class="flex flex-col min-h-[calc(100dvh-70px)] lg:w-[calc(100%-20rem)] justify-center items-center">
         {#if activeLobbyState.gameState.game == "InLobby" && !error}
             <div class="flex flex-row left-20">
                 
