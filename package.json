@@ -31,6 +31,7 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-auto": "^5.0.0",
-		"mongodb": "^6.15.0"
+		"mongodb": "^6.15.0",
+		"svelte-canvas": "^2.0.2"
 	}
 }

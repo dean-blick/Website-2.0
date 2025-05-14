@@ -8,13 +8,6 @@ interface ProjectInfo {
 
 export const projects: Array<ProjectInfo> = [
     {
-        Title: 'ToDo',
-        Description: 'Implement and include web projects',
-        Badges: ['Badge'],
-        Link: '',
-        GitHub: ''
-    },
-    {
         Title: 'Online Collaborative Art Board - Hack KU',
         Description: '\"Hack Draw\" was an online collaborative art board made by me during the 36 hour hackathon \"Hack KU.\" You can click the \"go\" link below or visit the devpost page here: https://devpost.com/software/hack-draw',
         Badges: ['Svelte/SvelteKit', 'MongoDB Atlas', 'TailwindCSS', 'SkeletonUI'],
@@ -41,6 +34,13 @@ export const projects: Array<ProjectInfo> = [
         Badges: ['C#', 'WPF'],
         Link: '',
         GitHub: 'https://github.com/dean-blick/NewScantron'
+    },
+    {
+        Title: 'Sorting Algorithm Visualizer',
+        Description: 'A sorting algorithm visualizer that has a few different sorting algorithms and options',
+        Badges: ['Svelte', 'svelte-canvas'],
+        Link: '/projects/sortingVisual',
+        GitHub: ''
     },
     {
         Title: 'Websocket Auction',
