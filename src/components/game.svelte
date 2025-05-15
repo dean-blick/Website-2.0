@@ -38,7 +38,7 @@
         wordLength = word.length
         console.log(wordLength)
         if(isCustom){
-            window.location.href = ("/game")
+            window.location.href = ("/projects/wordGame")
         }
     }
     function keyPress(event){
