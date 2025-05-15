@@ -2,9 +2,7 @@
 	import Project from "../components/MainScreenProject.svelte";
     import { projects } from "./projectHighlights";
 
-    let projectsSection: Element
-
-    let scrollSections: Array<Element> = []
+    let scrollSections: Array<Element> = $state([])
 
     let currentScroll: number = $state(0);
 
@@ -13,11 +11,11 @@
         if(scrollAmount < 0) {
             if (currentScroll == 0) return;
             currentScroll -= 1;
-            window.scrollTo({ top: scrollSections[currentScroll - 1].getBoundingClientRect().top - 80, behavior: 'smooth' });
+            window.scrollTo({ top: scrollSections[currentScroll].getBoundingClientRect().top - 80, behavior: 'smooth' });
         } else {
-            //if (currentScroll == scrollSections.length - 1) return;
+            if (currentScroll >= scrollSections.length - 1) return;
             currentScroll += 1;
-            window.scrollTo({ top: scrollSections[currentScroll + 1].getBoundingClientRect().top - 80, behavior: 'smooth'})
+            window.scrollTo({ top: scrollSections[currentScroll].getBoundingClientRect().top - 80, behavior: 'smooth'})
         }
     }
 </script>
