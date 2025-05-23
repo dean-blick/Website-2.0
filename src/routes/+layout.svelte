@@ -20,10 +20,13 @@
 
 <svelte:head>
     <link rel="icon" type="image/svg" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <link rel="icon" type="image/svg" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg" href="/favicon.ico" />
 </svelte:head>
-<header class="sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-950/90 backdrop-blur w-full h-[70px] flex justify-center items-center px-5 lg:px-20">
+<header class="header">
 	<a href="/" class="flex flex-row mr-4">
-        <b class="font-bold poppins">Dean</b> <div class="hidden lg:block">&nbsp;Blickenstaff</div>
+        <b class="bold">Dean</b> <div class="hide-mobile">&nbsp;Blickenstaff</div>
     </a>
 	<div class="flex lg:ml-auto items-center justify-center gap-2 lg:gap-4">
         {#each tabs as tab, index}
@@ -71,3 +74,24 @@
         </Popover>
 	</div>
 </footer>
+
+
+<style lang="postcss">
+    @reference "tailwindcss";
+    @reference '../app.css';
+    
+    .header {
+        @apply sticky top-0 z-50 border-b-[1px] border-surface-500/20 bg-surface-950/90 backdrop-blur w-full h-[70px] flex justify-center items-center px-5;
+        @variant lg {
+            @apply px-20;
+        }
+    }
+
+    .bold {
+        @apply font-bold;
+    }
+
+    .hide-mobile {
+        @apply hidden lg:block;
+    }
+</style>
