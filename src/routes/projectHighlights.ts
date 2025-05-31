@@ -9,7 +9,7 @@ interface ProjectInfo {
 export const projects: Array<ProjectInfo> = [
     {
         Title: 'Online Collaborative Art Board - Hack KU',
-        Description: '\"Hack Draw\" was an online collaborative art board made by me during the 36 hour hackathon \"Hack KU.\" You can click the \"go\" link below or visit the devpost page here: https://devpost.com/software/hack-draw',
+        Description: '\"Hack Draw\" was an online collaborative art board made by me during the 36 hour hackathon \"Hack KU.\" You can click the \"go\" link below to see the final canvas',
         Badges: ['Svelte/SvelteKit', 'MongoDB Atlas', 'TailwindCSS', 'SkeletonUI'],
         Link: 'https://hack-draw.vercel.app',
         GitHub: 'https://github.com/dean-blick/HackDraw'
