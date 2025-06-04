@@ -5,6 +5,7 @@
 	import type { ProjectInfo } from '../../components/Project.svelte'
 	import type { Component } from 'svelte'
 	import Icon from '@iconify/svelte'
+	import BlogShell from '../../components/BlogShell.svelte'
 
 	let { data }: { data: PageData } = $props()
 
@@ -39,9 +40,11 @@
 	</Shell>
 {:else}
 	<Shell>
-		<button onclick={goBackToBlogs} class="btn-icon preset-outlined-primary-100-900 absolute top-17 left-0 m-5">
-			<Icon icon="mdi-light:arrow-left"></Icon>
-		</button>
-		<CurrentBlog />
+		<div class="relative flex w-[calc(100%-40px)] flex-col items-center lg:w-[55rem] lg:px-10">
+			<button onclick={goBackToBlogs} class="btn-icon preset-outlined-primary-100-900 absolute top-6 left-0">
+				<Icon icon="mdi-light:arrow-left"></Icon>
+			</button>
+			<CurrentBlog />
+		</div>
 	</Shell>
 {/if}

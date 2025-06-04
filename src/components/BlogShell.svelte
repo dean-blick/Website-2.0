@@ -1,4 +1,5 @@
 <div class="blog-shell">
+	<slot name="backButton" />
 	<div class="header">
 		<slot name="header" />
 	</div>
@@ -14,9 +15,9 @@
 	@reference "tailwindcss";
 	@reference '../app.css';
 	.blog-shell {
-		@apply flex w-full flex-col px-6 pt-20 pb-2;
+		@apply flex w-full flex-col pt-20 pb-2;
 		@variant lg {
-			@apply w-auto;
+			@apply md:w-[50rem];
 		}
 	}
 	.header {
