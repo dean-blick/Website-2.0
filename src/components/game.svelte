@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Line from '../components/gameLine.svelte'
 	import wordsJSON from '$lib/words.json'
 
@@ -6,15 +6,18 @@
 	export let word = words[Math.round(Math.random() * words.length)]
 	export let isCustom = false
 	let wordLength = word.length
-	function emptyArray(value) {
+	function emptyArray(value: string | number): Array<string | number> {
 		var r = []
 		for (var i = 0; i < wordLength; i++) {
 			r.push(value)
 		}
 		return r
 	}
+	let previous: Array<Array<string | number>>
 	$: previous = []
+	let lineStatus: Array<Array<string | number>>
 	$: lineStatus = []
+	let input: Array<string | number>
 	$: input = emptyArray('')
 	$: guessNumber = 0
 	$: answerArray = emptyArray('')
@@ -38,7 +41,7 @@
 			window.location.href = '/projects/wordGame'
 		}
 	}
-	function keyPress(event) {
+	function keyPress(event: KeyboardEvent) {
 		if (win) return
 		if (event.key.length == 1 && keyPosition != wordLength) {
 			input[keyPosition] = event.key.toLowerCase()
