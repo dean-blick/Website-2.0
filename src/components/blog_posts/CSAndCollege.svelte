@@ -34,6 +34,9 @@
 
             </ul>
         </div>
+        <div>
+            A few opposing sentiments are that the current job market is too oversaturated, and that the job market is just not as easy to get into as it was a few years ago.
+        </div>
         
     </div>
 </BlogShell>
