@@ -1,3 +1,3 @@
 export let isLoading = $state({
-    value: false
+	value: false
 })
