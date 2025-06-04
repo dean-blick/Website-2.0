@@ -1,6 +1,9 @@
 <script lang="ts">
-	let { info } = $props<{ info: ProjectInfo }>()
-	interface ProjectInfo {
+	let { info, linkFunction = undefined } = $props<{
+		info: ProjectInfo
+		linkFunction?: Function
+	}>()
+	export interface ProjectInfo {
 		Title: string
 		Description: string
 		Badges: Array<string>
@@ -32,11 +35,17 @@
 			</a>
 		{/if}
 
-		{#if info.Link != ''}
+		{#if linkFunction === undefined && info.Link != ''}
 			<a href={info.Link} class="project-go">
 				Go
 				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="#ffffff" d="M2 11V9h12l-4-4l1-2l7 7l-7 7l-1-2l4-4z" /></svg>
 			</a>
+		{/if}
+		{#if linkFunction !== undefined && info.Link != ''}
+			<button onclick={() => linkFunction(info.Link)} class="project-go">
+				Go
+				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="#ffffff" d="M2 11V9h12l-4-4l1-2l7 7l-7 7l-1-2l4-4z" /></svg>
+			</button>
 		{/if}
 	</div>
 </div>
@@ -46,7 +55,7 @@
 	@reference '../app.css';
 
 	.project-container {
-		@apply card preset-filled-surface-100-900 my-2 flex w-[calc(100%-40px)] flex-row p-3 md:w-[45rem];
+		@apply card preset-filled-surface-100-900 my-2 flex w-[calc(100%-40px)] flex-row p-3 md:w-[50rem];
 	}
 
 	.project-content {

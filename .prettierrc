@@ -4,10 +4,12 @@
 	"semi": false,
 	"trailingComma": "none",
 	"singleAttributePerLine": false,
-	"printWidth": 1000,
+	"printWidth": 600,
 	"tabWidth": 4,
 	"arrowParens": "avoid",
 	"bracketSpacing": true,
+	"bracketSameLine": true,
+	"htmlWhitespaceSensitivity": "ignore",
 	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"overrides": [
 		{
