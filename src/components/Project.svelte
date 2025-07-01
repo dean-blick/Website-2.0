@@ -2,8 +2,11 @@
 	import GitHub from './GitHub.svelte'
 	import ArrowRight from '@lucide/svelte/icons/move-right'
 	import { themeState } from './stores.svelte'
-	let { info } = $props<{ info: ProjectInfo }>()
-	interface ProjectInfo {
+	let { info, linkFunction = undefined } = $props<{
+		info: ProjectInfo
+		linkFunction?: Function
+	}>()
+	export interface ProjectInfo {
 		Title: string
 		Description: string
 		Badges: Array<string>
@@ -35,11 +38,17 @@
 			</a>
 		{/if}
 
-		{#if info.Link != ''}
+		{#if linkFunction === undefined && info.Link != ''}
 			<a href={info.Link} class="badge preset-outlined-primary-300-700 text-surface-500 flex flex-row items-center justify-center text-center dark:text-white">
 				Go
 				<ArrowRight size={15} color={themeState.isDarkMode ? 'white' : 'grey'} />
 			</a>
+		{/if}
+		{#if linkFunction !== undefined && info.Link != ''}
+			<button onclick={() => linkFunction(info.Link)} class="badge preset-outlined-primary-300-700 text-surface-500 flex flex-row items-center justify-center text-center dark:text-white">
+				Go
+				<ArrowRight size={15} color={themeState.isDarkMode ? 'white' : 'grey'} />
+			</button>
 		{/if}
 	</div>
 </div>
