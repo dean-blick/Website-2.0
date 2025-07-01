@@ -5,7 +5,6 @@
 	import type { ProjectInfo } from '../../components/Project.svelte'
 	import type { Component } from 'svelte'
 	import Icon from '@iconify/svelte'
-	import BlogShell from '../../components/BlogShell.svelte'
 
 	let { data }: { data: PageData } = $props()
 

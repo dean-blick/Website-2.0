@@ -2,6 +2,7 @@
 	import '../app.css'
 	let { children } = $props()
 	import { Popover } from '@skeletonlabs/skeleton-svelte'
+	import LightSwitch from '../components/lightSwitch.svelte'
 
 	let openState = $state(false)
 
@@ -28,6 +29,7 @@
 		<div class="hide-mobile">&nbsp;Blickenstaff</div>
 	</a>
 	<div class="flex items-center justify-center gap-2 lg:ml-auto lg:gap-4">
+		<LightSwitch />
 		{#each tabs as tab, index}
 			<a href={tab.link} class="btn preset-outlined-primary-100-900 translate-y-[1px]">
 				<p>{tab.name}</p>
@@ -40,10 +42,10 @@
 		}
 	</style>
 </header>
-<main class="bg-surface-950/50">
+<main class="bg-surface-white dark:bg-surface-950/50">
 	{@render children()}
 </main>
-<footer class="border-surface-500/20 bg-surface-950/90 flex h-[70px] items-center border-t-[1px] p-4">
+<footer class="footer">
 	<div class="container mx-auto flex flex-row items-center justify-center gap-4">
 		<a href="https://github.com/dean-blick" target="_blank" aria-label="GitHub" class="">
 			<img alt="GitHub" src="/mdi--github.png" class="size-8" />
@@ -70,7 +72,7 @@
 	@reference '../app.css';
 
 	.header {
-		@apply border-surface-500/20 bg-surface-950/90 sticky top-0 z-50 flex h-[70px] w-full items-center justify-center border-b-[1px] px-5 backdrop-blur;
+		@apply border-surface-200 bg-surface-100 dark:border-surface-500/20 dark:bg-surface-950/90 sticky top-0 z-50 flex h-[70px] w-full items-center justify-center border-b-[1px] px-5 backdrop-blur;
 		@variant lg {
 			@apply px-20;
 		}
@@ -78,6 +80,10 @@
 
 	.bold {
 		@apply font-bold;
+	}
+
+	.footer {
+		@apply border-surface-200 bg-surface-100 dark:border-surface-500/20 dark:bg-surface-950/90 flex h-[70px] items-center border-t-[1px] p-4;
 	}
 
 	.hide-mobile {

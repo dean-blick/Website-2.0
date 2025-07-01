@@ -9,6 +9,8 @@
 
 @import '../editedPurple.css';
 
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
 [data-theme='editedPurple'] body {
 	background-image: radial-gradient(at 0% 10%, color-mix(in oklab, var(--color-primary-500) 10%, transparent) 0px, transparent 30%), radial-gradient(at 100% 90%, color-mix(in oklab, var(--color-primary-500) 5%, transparent) 0px, transparent 40%);
 	background-attachment: fixed;

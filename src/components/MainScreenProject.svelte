@@ -1,4 +1,7 @@
 <script lang="ts">
+	import GitHub from './GitHub.svelte'
+	import ArrowRight from '@lucide/svelte/icons/move-right'
+	import { themeState } from './stores.svelte'
 	let { info } = $props<{ info: ProjectInfo }>()
 	interface ProjectInfo {
 		Title: string
@@ -9,7 +12,7 @@
 	}
 </script>
 
-<div class="card preset-filled-surface-100-900 m-2 flex w-[calc(100%-40px)] flex-row p-3 md:w-[45rem]">
+<div class="card bg-surface-100 dark:bg-surface-900 m-2 flex w-[calc(100%-40px)] flex-row p-3 md:w-[45rem]">
 	<div class="flex flex-col flex-wrap justify-center lg:justify-between">
 		<h1 class={'flex flex-row justify-start  font-bold ' + (info.Description != '' ? 'mb-2' : 'mb-0')}>
 			{info.Title}
@@ -27,15 +30,15 @@
 	</div>
 	<div class="ml-auto flex w-[20px] min-w-[20px] flex-col items-end justify-end">
 		{#if info.GitHub != ''}
-			<a href={info.GitHub} aria-label="link" class="mb-auto">
-				<img alt="GitHub" src="/mdi--github.png" class="h-[20px] w-[20px]" />
+			<a href={info.GitHub} aria-label="link" class="mb-auto h-[20px] w-[20px]">
+				<GitHub />
 			</a>
 		{/if}
 
 		{#if info.Link != ''}
 			<a href={info.Link} class="badge preset-outlined-primary-50-950 flex flex-row items-center justify-center text-center">
 				Go
-				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="#ffffff" d="M2 11V9h12l-4-4l1-2l7 7l-7 7l-1-2l4-4z" /></svg>
+				<ArrowRight size={15} color={themeState.isDarkMode ? 'white' : 'black'} />
 			</a>
 		{/if}
 	</div>
