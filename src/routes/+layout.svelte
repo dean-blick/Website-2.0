@@ -55,7 +55,7 @@
 		<a href="https://www.linkedin.com/in/deanblickenstaff/" target="_blank" aria-label="link" class="size-8">
 			<Linkedin size={32} color={themeState.isDarkMode ? 'white' : 'gray'} />
 		</a>
-		<Popover open={openState} onOpenChange={e => (openState = e.open)} contentBase="card bg-surface-200-800 p-4 space-y-4 max-w-[320px] size-8" triggerBase="flex justify-center items-center" arrow arrowBackground="!bg-surface-200 dark:!bg-surface-800">
+		<Popover open={openState} onOpenChange={e => (openState = e.open)} contentBase="card bg-surface-200-800 p-4 space-y-4 max-w-[320px]" triggerBase="flex justify-center items-center" arrow arrowBackground="!bg-surface-200 dark:!bg-surface-800">
 			{#snippet trigger()}<Mail size={32} color={themeState.isDarkMode ? 'white' : 'gray'} />{/snippet}
 			{#snippet content()}
 				<div class="flex w-full flex-row items-center justify-end">
