@@ -1,9 +1,9 @@
 <script lang="ts">
-	let { info, linkFunction = undefined } = $props<{
-		info: ProjectInfo
-		linkFunction?: Function
-	}>()
-	export interface ProjectInfo {
+	import GitHub from './GitHub.svelte'
+	import ArrowRight from '@lucide/svelte/icons/move-right'
+	import { themeState } from './stores.svelte'
+	let { info } = $props<{ info: ProjectInfo }>()
+	interface ProjectInfo {
 		Title: string
 		Description: string
 		Badges: Array<string>
@@ -12,77 +12,34 @@
 	}
 </script>
 
-<div class="project-container">
-	<div class="project-content">
-		<h1 class="project-title mb-{info.Description != '' ? '2' : '0'}">
+<div class="card border-surface-200 bg-surface-50 dark:border-surface-800 dark:bg-surface-900 m-2 flex w-[calc(100%-40px)] flex-row border-[1px] p-3 md:w-[45rem]">
+	<div class="flex flex-col flex-wrap justify-center lg:justify-between">
+		<h1 class={'text-surface-500 flex flex-row  justify-start font-bold dark:text-white' + (info.Description != '' ? 'mb-2' : 'mb-0')}>
 			{info.Title}
 		</h1>
-		<div class="project-description">
+		<div class="text-surface-500 flex w-full flex-row justify-start text-sm text-wrap opacity-75 dark:text-white">
 			{info.Description}
 		</div>
-		<div class="project-badges">
+		<div class="mt-1 flex flex-row flex-wrap justify-start">
 			{#each info.Badges as badge}
-				<div class="project-badge">
+				<div class="badge preset-filled-primary-100-900 mt-2 mr-2">
 					{badge}
 				</div>
 			{/each}
 		</div>
 	</div>
-	<div class="project-links">
+	<div class="ml-auto flex w-[20px] min-w-[20px] flex-col items-end justify-end">
 		{#if info.GitHub != ''}
-			<a href={info.GitHub} aria-label="link" class="mb-auto">
-				<img alt="GitHub" src="/mdi--github.png" class="h-[20px] w-[20px]" />
+			<a href={info.GitHub} aria-label="link" class="mb-auto h-[20px] w-[20px]">
+				<GitHub />
 			</a>
 		{/if}
 
-		{#if linkFunction === undefined && info.Link != ''}
-			<a href={info.Link} class="project-go">
+		{#if info.Link != ''}
+			<a href={info.Link} class="badge preset-outlined-primary-300-700 text-surface-500 flex flex-row items-center justify-center text-center dark:text-white">
 				Go
-				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="#ffffff" d="M2 11V9h12l-4-4l1-2l7 7l-7 7l-1-2l4-4z" /></svg>
+				<ArrowRight size={15} color={themeState.isDarkMode ? 'white' : 'grey'} />
 			</a>
-		{/if}
-		{#if linkFunction !== undefined && info.Link != ''}
-			<button onclick={() => linkFunction(info.Link)} class="project-go">
-				Go
-				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20"><path fill="#ffffff" d="M2 11V9h12l-4-4l1-2l7 7l-7 7l-1-2l4-4z" /></svg>
-			</button>
 		{/if}
 	</div>
 </div>
-
-<style lang="postcss">
-	@reference "tailwindcss";
-	@reference '../app.css';
-
-	.project-container {
-		@apply card preset-filled-surface-100-900 my-2 flex w-[calc(100%-40px)] flex-row p-3 md:w-[50rem];
-	}
-
-	.project-content {
-		@apply flex flex-col flex-wrap justify-center lg:justify-between;
-	}
-
-	.project-links {
-		@apply ml-auto flex w-[20px] min-w-[20px] flex-col items-end justify-end;
-	}
-
-	.project-go {
-		@apply badge preset-outlined-primary-50-950 flex flex-row items-center justify-center text-center;
-	}
-
-	.project-badges {
-		@apply mt-1 flex flex-row flex-wrap justify-start;
-	}
-
-	.project-badge {
-		@apply badge preset-filled-primary-100-900 mt-2 mr-2;
-	}
-
-	.project-title {
-		@apply flex flex-row justify-start font-bold;
-	}
-
-	.project-description {
-		@apply flex w-full flex-row justify-start text-sm text-wrap opacity-75;
-	}
-</style>
