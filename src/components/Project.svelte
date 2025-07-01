@@ -14,7 +14,7 @@
 
 <div class="card border-surface-200 bg-surface-50 dark:border-surface-800 dark:bg-surface-900 m-2 flex w-[calc(100%-40px)] flex-row border-[1px] p-3 md:w-[45rem]">
 	<div class="flex flex-col flex-wrap justify-center lg:justify-between">
-		<h1 class={'text-surface-500 flex flex-row  justify-start font-bold dark:text-white' + (info.Description != '' ? 'mb-2' : 'mb-0')}>
+		<h1 class={'text-surface-500 flex flex-row  justify-start font-bold dark:text-white ' + (info.Description != '' ? 'mb-2' : 'mb-0')}>
 			{info.Title}
 		</h1>
 		<div class="text-surface-500 flex w-full flex-row justify-start text-sm text-wrap opacity-75 dark:text-white">
